@@ -47,16 +47,16 @@ const Index = ({navigation, route}) => {
       {Object.keys(book).length > 0 ? (
         <>
           <ScrollView
-            contentContainerStyle={[t.pX6, t.pY3, t.justifyBetween, t.minHFull]}
+            contentContainerStyle={[t.pX6, t.pT3,t.pB8, t.justifyBetween, t.flex1]}
             style={[t.selfStart, t.wFull]}>
+            <View>
             <TouchableHighlight
               style={t.selfStart}
               underlayColor="#1D78740a"
               onPress={() => navigation.navigate(HOME_SCREEN)}>
               <ArrowLeft />
             </TouchableHighlight>
-            <View>
-              <View style={[t.bgBase, t.wFull, t.p10, t.roundedLg, t.mY4, ,]}>
+              <View style={[t.bgBase, t.wFull, t.p10, t.roundedLg, t.mY4 ,]}>
                 <Text
                   style={[
                     t.text4xl,
@@ -108,7 +108,7 @@ const Index = ({navigation, route}) => {
             </View>
             <Button
               title="Share link"
-              style={[t.wFull, t.mB2, t.mT8]}
+              style={[t.wFull, t.mB6, t.mT4]}
               onPress={() => shareResponse()}
               styleText={[t.textWhite, t.textWhite]}>
               <ShareIcon />

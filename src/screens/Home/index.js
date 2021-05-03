@@ -27,8 +27,6 @@ const Index = ({navigation}) => {
     let page = 1;
     const res = await getBooks(page);
     const more = booksShowed.concat(res.books);
-    console.log('DATA', more);
-    console.log('JUMLAH', more.length);
     setbooksShowed(more);
     page += 1;
     setLoadMore(false);
